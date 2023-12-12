@@ -43,7 +43,7 @@ class MyThread extends Thread {
 MyThread myThread = new MyThread();
 myThread.start();
 ```
-### Using the Runnable Interface to Create and Run a Thread
+### 4. Using the Runnable Interface to Create and Run a Thread
 The Runnable interface provides an alternative way to create threads by implementing the run method. This allows better flexibility as a class can implement multiple interfaces.
 
 ```java
@@ -58,14 +58,14 @@ Thread myThread = new Thread(new MyRunnable());
 myThread.start();
 ```
 
-### Limitations of using basic APIs
+### 5. Limitations of using basic APIs
 While the basic APIs like Thread and Runnable are essential, they have limitations in terms of flexibility, scalability, and advanced features for managing concurrent tasks.
 
 ## Executor Framework
-### Features of Executor Framework
+### 6. Features of Executor Framework
 The Executor Framework in Java provides a higher-level abstraction for managing and controlling thread execution. It offers features like thread pooling, task scheduling, and better resource management.
 
-### Executor Interface
+### 7. Executor Interface
 The Executor interface is at the core of the framework, defining a single method:
 
 ```java
@@ -75,7 +75,7 @@ public interface Executor {
 ```
 Implementations of this interface provide a way to execute a Runnable task asynchronously.
 
-### ExecutorService Interface
+### 8. ExecutorService Interface
 The ExecutorService interface extends Executor and provides a more complete set of methods for managing the lifecycle of threads and tasks. Some key methods include:
 
 ```java
@@ -89,7 +89,7 @@ public interface ExecutorService extends Executor {
 }
 ```
 
-### Thread Pool
+### 9. Thread Pool
 Thread pools are a key component of the Executor Framework, allowing the reuse of threads to execute multiple tasks. This helps in avoiding the overhead of thread creation and destruction.
 
 ```java
@@ -103,7 +103,7 @@ executorService.submit(new MyCallable());
 executorService.shutdown();
 ```
 
-### Callables and Futures
+### 10. Callables and Futures
 The Callable interface is an enhancement over Runnable that allows threads to return values. Futures represent the result of asynchronous computations, providing a way to retrieve the output of a Callable task.
 
 ```java
@@ -122,7 +122,7 @@ String result = futureResult.get();
 
 ```
 
-### Different Thread Pools
+### 11. Different Thread Pools
 Thread pools are managed collections of worker threads that execute tasks. The Executors class provides factory methods to create different types of thread pools, such as:
 
 newFixedThreadPool(int nThreads)
@@ -138,7 +138,7 @@ ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(
 ```
 
 
-### ScheduledExecutorService
+### 12. ScheduledExecutorService
 
 The ScheduledExecutorService interface extends ExecutorService and provides methods to schedule tasks with specified delays or at fixed rates. It's useful for tasks that need to be executed periodically.
 
@@ -150,7 +150,7 @@ scheduledExecutorService.scheduleAtFixedRate(
 );
 ```
 
-### ThreadFactory API
+### 13. ThreadFactory API
 
 The ThreadFactory interface allows you to customize the creation of threads in a thread pool. This can be useful for setting thread names, priorities, or other thread properties.
 
@@ -167,7 +167,7 @@ ThreadFactory customThreadFactory = new ThreadFactory() {
 ExecutorService customThreadPool = Executors.newFixedThreadPool(5, customThreadFactory);
 ```
 
-### ThreadPoolExecutor
+### 14. ThreadPoolExecutor
 
 The ThreadPoolExecutor class is a powerful and customizable implementation of the ExecutorService interface. It allows fine-tuning of core and maximum pool sizes, keep-alive times, and other parameters.
 
