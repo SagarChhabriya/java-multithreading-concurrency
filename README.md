@@ -61,7 +61,7 @@ myThread.start();
 ### 5. Limitations of using basic APIs
 While the basic APIs like Thread and Runnable are essential, they have limitations in terms of flexibility, scalability, and advanced features for managing concurrent tasks.
 
-## Executor Framework
+## Section 2: Executor Framework
 ### 6. Features of Executor Framework
 The Executor Framework in Java provides a higher-level abstraction for managing and controlling thread execution. It offers features like thread pooling, task scheduling, and better resource management.
 
