@@ -9,7 +9,7 @@
     - [3. Using the Thread Class to Create and Run a Thread](#3-using-the-thread-class-to-create-and-run-a-thread)
     - [4. Using the Runnable Interface to Create and Run a Thread](#4-using-the-runnable-interface-to-create-and-run-a-thread)
     - [5. Limitations of using basic APIs](#5-limitations-of-using-basic-apis)
-  - [Executor Framework](#executor-framework)
+  - [Section 2: Executor Framework](#executor-framework)
     - [6. Features of Executor Framework](#6-features-of-executor-framework)
     - [7. Executor Interface](#7-executor-interface)
     - [8. ExecutorService Interface](#8-executorservice-interface)
